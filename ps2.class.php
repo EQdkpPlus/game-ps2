@@ -22,20 +22,48 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('ps2')) {
 	class ps2 extends game_generic {
+		public $version			= '0.1';
 		protected $this_game	= 'ps2';
 		protected $types		= array('classes', 'races', 'filters');
-		public $icons			= array('classes', 'classes_big', 'events', 'races');
 		protected $classes		= array();
 		protected $races		= array();
 		protected $factions		= array();
 		protected $filters		= array();
 		public $langs			= array('english', 'german');
 
+		protected $class_dependencies = array(
+			array(
+				'name'		=> 'race',
+				'type'		=> 'races',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'parent'	=> false
+			),
+			array(
+				'name'		=> 'class',
+				'type'		=> 'classes',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'primary'	=> true,
+				'colorize'	=> true,
+				'roster'	=> true,
+				'recruitment' => true,
+				'parent'	=> false
+		);
+		
+		protected $class_colors = array(
+			1	=> '#1A3C8A',
+			2	=> '#EB0900',
+			3	=> '#FDCB00',
+			4	=> '#474AF8',
+		    5	=> '#C62A19',
+			6	=> '#5D9900',
+		);
+
 		protected $glang		= array();
 		protected $lang_file	= array();
 		protected $path			= '';
 		public $lang			= false;
-		public $version			= '0.1';		
 
 		/**
 		* Initialises filters
@@ -62,15 +90,6 @@ if(!class_exists('ps2')) {
 		* @return array
 		*/
 		public function get_OnChangeInfos($install=false){
-			//classcolors
-			$info['class_color'] = array(
-				1 => '#1A3C8A',
-				2 => '#EB0900',
-				3 => '#FDCB00',
-				4 => '#474AF8',
-			    5 => '#C62A19',
-				6 => '#5D9900',
-			);
 			
 			$info['aq'] = array();
 

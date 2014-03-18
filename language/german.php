@@ -20,28 +20,25 @@ if ( !defined('EQDKP_INC') ){
 	header('HTTP/1.0 404 Not Found');exit;
 }
 $german_array = array(
-
 	'classes' => array(
-		0 => 'Unbekannt',
-		1 => 'Ingenieur',
-		2 => 'Schwere Angriffseinh.',
-		3 => 'Spion',
-		4 => 'Leichte Angriffseinh.',
-		5 => 'Max',
-		6 => 'Sanitäter',
+		0	=> 'Unbekannt',
+		1	=> 'Ingenieur',
+		2	=> 'Schwere Angriffseinh.',
+		3	=> 'Spion',
+		4	=> 'Leichte Angriffseinh.',
+		5	=> 'Max',
+		6	=> 'Sanitäter',
 	),
-	
 	'races' => array(
-		'Unbekannt',
-		'Neues Konglomerat',
-		'Terranische Republik',
-		'Vanu Souveränität',
+		0	=> 'Unbekannt',
+		1	=> 'Neues Konglomerat',
+		2	=> 'Terranische Republik',
+		3	=> 'Vanu Souveränität',
 	),
 
 	'lang' => array(
-		'ps2' => 'Planetside 2',
+		'ps2'			=> 'Planetside 2',
 
 	),
-	
 );
 ?>

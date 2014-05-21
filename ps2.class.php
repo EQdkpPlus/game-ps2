@@ -49,7 +49,7 @@ if(!class_exists('ps2')) {
 				'roster'	=> true,
 				'recruitment' => true,
 				'parent'	=> false
-		);
+		));
 		
 		protected $class_colors = array(
 			1	=> '#1A3C8A',

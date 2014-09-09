@@ -37,8 +37,9 @@ $english_array = array(
 	),
 
 	'lang' => array(
-		'ps2'			=> 'Planetside 2',
-
+		'ps2'							=> 'Planetside 2',
+		'uc_race'						=> 'Race',
+		'uc_class'						=> 'Class',
 	),
 );
 ?>
